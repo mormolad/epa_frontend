@@ -1,0 +1,129 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: $wrapper;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 28px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: white;
+    min-height: 764px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+      width: 354px;
+      height: 534px;
+
+      .logo {
+        height: 56px;
+        border: 0;
+      }
+
+      h1 {
+        @include text($font-size: 36px, $line-height: 44px);
+        max-width: 345px;
+        margin: 30px 0;
+        text-align: center;
+      }
+
+      label {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 88px;
+        width: 100%;
+
+        .eye {
+          position: absolute;
+          display: inline-block;
+          top: 12px;
+          right: 20px;
+          width: 28px;
+          height: 28px;
+          background-repeat: no-repeat;
+        }
+
+        input {
+          @include text($font-weight: 400);
+          width: 100%;
+          height: 56px;
+          border-radius: 20px;
+          background: rgb(245, 245, 245);
+          border: none;
+          padding: 15px 22px;
+
+          &:focus {
+            outline: 2px solid rgb(116, 115, 109);
+          }
+        }
+
+        input::-webkit-input-placeholder {
+          color: rgb(51, 50, 50);
+        }
+
+        span {
+          @include text(
+            $font-weight: 400,
+            $line-height: 1.25,
+            $font-size: 12px
+          );
+          width: 308px;
+          align-self: center;
+          color: $red-base-color;
+          padding: 0;
+        }
+      }
+
+      button {
+        @include text($font-weight: 600);
+        width: 100%;
+        height: 56px;
+        border-radius: 20px;
+        background: rgb(197, 182, 241);
+        border: none;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: opacity 0.5s;
+
+        &:hover {
+          background: $wrapper;
+        }
+
+        &:disabled {
+          background: rgb(197, 182, 241);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    img {
+      border: 12px solid rgb(255, 255, 255);
+      border-radius: 28px;
+      width: 592px;
+      height: 100%;
+    }
+  }
+
+  .link {
+    @include text(
+      $font-size: 16px,
+      $line-height: 19px,
+      $font-weight: 400,
+      $color: $dark-green-base-color
+    );
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}

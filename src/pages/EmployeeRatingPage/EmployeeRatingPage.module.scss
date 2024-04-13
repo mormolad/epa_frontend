@@ -1,0 +1,143 @@
+@import '../../styles/vars';
+
+.employeeRatingPage__container {
+  width: 100%;
+  min-width: 1163px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 28px;
+  background-color: $light-gray-base-color;
+  margin: 24px 20px 60px 0;
+}
+
+.employeeRatingPage__header {
+  position: relative;
+  width: 100%;
+  height: 114px;
+  border-bottom: 2px solid $grey-base-color;
+}
+
+.employeeRatingPage__row {
+  display: flex;
+  gap: 108px;
+  align-items: center;
+  padding: 52px 0 38px 66.75px;
+}
+
+.employeeRatingPage__back {
+  display: flex;
+  gap: 12.25px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+}
+
+.employeeRatingPage__icon {
+  width: 9px;
+  height: 16.5px;
+  background: url(../../images/CaretLeft.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.employeeRatingPage__caption {
+  font-size: 16px;
+  font-weight: $fw-medium;
+  line-height: 19.36px;
+  color: $black-base-color;
+}
+
+.employeeRatingPage__title {
+  font-size: 16px;
+  font-weight: $fw-medium;
+  line-height: 19.36px;
+  color: $black-base-color;
+}
+
+.employeeRatingPage__score {
+  position: absolute;
+  width: 340px;
+  height: 52px;
+  top: 12px;
+  right: 37px;
+  border-radius: 30px;
+  background-color: $grey-base-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employeeRatingPage__star_out {
+  position: relative;
+  z-index: $zindex-10;
+  background-image: url(../../images/star-employee-rating-page-empty.svg);
+  width: 40px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.employeeRatingPage__star_in {
+  background-image: url(../../images/star-employee-rating-page-full.svg);
+  position: absolute;
+  z-index: $zindex-20;
+  overflow: hidden;
+  width: 0;
+  width: 40px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+}
+
+.employeeRatingPage__block {
+  width: 864px;
+  padding-left: 60px;
+  padding-bottom: 60px;
+}
+
+.employeeRatingPage__criteria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 419px 230px 167px;
+  column-gap: 24px;
+  margin-bottom: 53px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: $fw-semibold;
+    line-height: 26.63px;
+  }
+}
+
+.employeeRatingPage__list {
+  padding: 0;
+}
+
+.employeeRatingPage__recoTitle {
+  font-size: 26px;
+  font-weight: $fw-medium;
+  line-height: 31.47px;
+  padding: 40px 0 24px;
+}
+
+.employeeRatingPage__recoText {
+  width: 100%;
+  height: 264px;
+  border-radius: 40px;
+  border: 2px solid $purple-base-color;
+
+  p {
+    font-size: 16px;
+    font-weight: $fw-medium;
+    line-height: 19.36px;
+    padding: 37px 24px;
+    color: $black-base-color;
+  }
+}

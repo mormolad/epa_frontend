@@ -1,0 +1,122 @@
+@import '../../styles/vars';
+
+.boardDnD {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.boardDnD__title {
+  margin-left: 5px;
+  font-size: 19px;
+}
+
+.boardDnD__card {
+  background-color: $grey-base-color;
+  color: $black-base-color;
+  width: 281px;
+  height: 239px;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  margin-top: 20px;
+  cursor: grab;
+  padding-left: 20px;
+}
+
+.boardDnD__card-points {
+  height: 30px;
+  width: 120px;
+  margin: 20px 20px auto auto;
+  justify-self: end;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.boardDnD__card-points_light-green {
+  background-color: $yellow-base-color;
+  color: #000000;
+}
+
+.boardDnD__card-points_grey {
+  background-color: #a6a6a6;
+}
+
+.boardDnD__card-points_red {
+  background-color: #f24822;
+}
+
+.boardDnD__card-points_violet {
+  background-color: #c5b6f1;
+}
+
+.boardDnD__card-points_green {
+  background-color: #00d37f;
+}
+
+.boardDnD__card-number {
+  width: 100px;
+  margin-top: 27.5px;
+}
+
+.boardDnD__card:first-child {
+  margin-top: 20px;
+}
+
+.boardDnD__card_OverHandler {
+  background: rgba(172, 172, 172, 0.356);
+  box-shadow: 0px 4px 20px rgba(166, 166, 166, 0.4);
+}
+
+.boardDnD__card-title {
+  width: 232px;
+  height: 54px;
+  font-size: 22px;
+  font-weight: 700;
+  grid-column-start: span 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.boardDnD__card-deadline {
+  grid-column-start: span 2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.boardDnD__card-forfeit {
+  grid-column-start: span 2;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.boardDnD__card-deadline-timer {
+  grid-column-start: span 2;
+  margin-top: 5px;
+}
+
+.boardDnD__column {
+  flex: 1;
+}
+.boardDnD__column_center {
+  border-left: 1px solid #a9d5dd;
+  border-right: 1px solid #a9d5dd;
+}
+
+.boardDnD__column:first-child {
+  flex: 20%;
+}
+
+.boardDnD__column:nth-child(2) {
+  flex: 40%;
+}
+
+.boardDnD__column:nth-child(3) {
+  flex: 40%;
+}

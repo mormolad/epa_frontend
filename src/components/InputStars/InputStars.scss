@@ -1,0 +1,74 @@
+.input-stars {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+
+  &__container {
+    position: relative;
+    width: 280px;
+    height: 44px;
+    background-image: url(../../images/star-questionnaire-empty.svg);
+    background-size: 56px 44px;
+    background-repeat: repeat-x;
+
+    &:focus-within {
+      box-shadow: 0px 0px 6px grey;
+      border-radius: 10px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 44px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: inherit;
+    background-size: 56px 44px;
+    background-repeat: repeat-x;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked,
+    &:hover {
+      background-image: url(../../images/star-questionnaire-full.svg);
+    }
+
+    &:hover ~ & {
+      background-image: url(../../images/star-questionnaire-empty.svg);
+    }
+
+    &:nth-of-type(1) {
+      width: 56px;
+      z-index: 5;
+    }
+
+    &:nth-of-type(2) {
+      width: 112px;
+      z-index: 4;
+    }
+
+    &:nth-of-type(3) {
+      width: 168px;
+      z-index: 3;
+    }
+
+    &:nth-of-type(4) {
+      width: 224px;
+      z-index: 2;
+    }
+
+    &:nth-of-type(5) {
+      width: 280px;
+      z-index: 1;
+    }
+  }
+}

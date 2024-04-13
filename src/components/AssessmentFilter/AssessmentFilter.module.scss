@@ -1,0 +1,53 @@
+.assessmentFilter__container {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px 0px 24px;
+}
+
+.assessmentFilter__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.assessmentFilter__torate {
+  border: none;
+  width: 137px;
+  height: 52px;
+  background: #c5b6f1;
+  border-radius: 20px;
+}
+
+.assessmentFilter__torate:hover {
+  cursor: pointer;
+}
+
+.assessmentFilter__rated {
+  box-sizing: border-box;
+  width: 247px;
+  height: 52px;
+  border: 2px solid #333232;
+  border-radius: 20px;
+}
+
+.assessmentFilter__rated:hover {
+  cursor: pointer;
+}
+
+.assessmentFilter__search {
+  width: 470px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+.assessmentFilter__input {
+  margin: 14px 24px;
+  border: none;
+  width: 404px;
+}

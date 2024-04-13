@@ -1,0 +1,63 @@
+@import './vars';
+
+//текст
+@mixin text(
+  $color: $black-base-color,
+  $font-size: 20px,
+  $font-weight: $fw-medium,
+  //500
+  $line-height: 1.2 // (24px)
+) {
+  margin: 0;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// списки, ссылки, кнопки, иконки
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link($color: $black-base-color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin disabled {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: $grey-base-color;
+  color: $black-base-color;
+}
+
+@mixin positioning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+@mixin button_delete {
+  background-image: url(../../images/TrashSimple.svg);
+}
+
+@mixin button_edit {
+  background-image: url(../../images/PencilSimple.svg);
+}

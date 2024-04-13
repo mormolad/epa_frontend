@@ -1,0 +1,62 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.switch-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 121%;
+  width: 350px;
+  height: 54px;
+  background-color: $white-base-color;
+  color: $black-base-color;
+  font-weight: $fw-medium;
+  box-sizing: border-box;
+  padding-left: 3px;
+  padding-right: 3px;
+  white-space: nowrap;
+  box-shadow: 0px 4px 20px 0px rgba(166, 166, 166, 0.4);
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.switch-checkbox.checked {
+  background-color: $white-base-color;
+}
+
+.switch-checkbox .left-side,
+.switch-checkbox .right-side {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  height: 100%;
+}
+
+.switch-checkbox .left-side {
+  background-color: $purple-base-color;
+  border-radius: 20px;
+  height: 48px;
+}
+
+.switch-checkbox .right-side {
+  border-radius: 20px;
+  height: 48px;
+}
+
+.switch-checkbox.checked .left-side {
+  background-color: $white-base-color;
+}
+
+.switch-checkbox.checked .right-side {
+  background-color: $purple-base-color;
+}

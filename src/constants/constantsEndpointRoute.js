@@ -1,0 +1,17 @@
+export const ENDPOINT_ROUTES = {
+  login: '/login',
+  register: '/signup',
+  personalArea: '/admin-person-area',
+  personalAreaEditing: '/admin-person-area-editing',
+  myTeam: '/myteam',
+  board: '/board',
+  analytics: '/analytics',
+  estimate: '/estimate',
+  questionnaire: '/questionnaire',
+  criteria: '/criteria-setting',
+  cardsEmployees: '/cards-employees',
+  userArea: '/user-area',
+  ratingCards: '/rating-cards',
+  taskCards: '/task-cards',
+  anyPage: '/*',
+};

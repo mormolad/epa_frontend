@@ -1,0 +1,50 @@
+@import '../../styles/mixins';
+
+.criterion {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    width: 100%;
+    min-height: 64px;
+    border: 2px solid $grey-base-color;
+    border-radius: 20px;
+    font-style: normal;
+    @include text($font-size: 20px, $line-height: 24px);
+    color: $black-base-color;
+    text-overflow: ellipsis;
+    background-color: $light-gray-base-color;
+    padding-left: 24px;
+
+    &_active {
+      border: 2px solid $black-base-color;
+    }
+
+    &:focus {
+      border: 2px solid $dark-green-base-color;
+    }
+
+    &:disabled {
+      color: $black-base-color;
+    }
+  }
+
+  &__button {
+    margin-left: 24px;
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 17px;
+    cursor: pointer;
+    background-image: url(../../images/delete-button-icon.svg);
+    border: none;
+    background-color: $light-gray-base-color;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
